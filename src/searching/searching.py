@@ -1,19 +1,16 @@
 def linear_search(arr, target):
-    # Your code here
-    # loop through the data starting from the beginning
-    for i in arr:
-        # if the value at the current index is equal to whatever we're looking for
-        if i == target:
-            # return the index where we found it
+    # loop through the data
+    for i in range(len(arr)):
+        # check whether the value in our index equals the value we're searching for
+        if arr[i] == target:
+            # if it does, simply return the index where we found it
             return i
-        i += 1
-    # if our target wasn't found, return -1
-    return -1   # not found
+    # if no value was found
+    return -1
 
 
 # Write an iterative implementation of Binary Search
 def binary_search(arr, target):
-    # Your code here
     # grab a hold of the lowest index in the data set
     low = 0
     # grab a hold of the highest index in the data set
@@ -36,4 +33,4 @@ def binary_search(arr, target):
             # if it's less, update the lower limit of the data to equal the middle index plus one value
             low = middle + 1
     # if no value was found
-    return -1  # not found
+    return -1
